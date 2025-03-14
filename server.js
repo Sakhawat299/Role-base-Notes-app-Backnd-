@@ -10,6 +10,10 @@ const noteRoutes = require("./routes/noteRoutes");
 const { logger } = require("./middleware/logger");
 
 const app = express();
+cors({
+    origin: "http://localhost:3000", // Allow frontend URL
+    credentials: true, // Allow cookies & authorization headers
+  })
 
 
 connectDB();

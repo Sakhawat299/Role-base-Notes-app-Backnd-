@@ -14,6 +14,7 @@ const errorHandler = (error, req, res, next) => {
   res.status(status)
 
   if (error.name === "ValidationError") {
+    
     // console.log("validation error ************")
     if (error.errors.password) {
       error.message = error.errors.password.message
